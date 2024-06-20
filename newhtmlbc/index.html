@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>File Upload</title>
+</head>
+<body>
+    <div class="intro-container" id="introPage">
+        <button onclick="showFileUploadInterface()">Go to Next Page</button>
+    </div>
+    <div class="container" id="fileUploadInterface" style="display: none;">
+        <h1>Securing Records Using BlockChain</h1>
+        <button onclick="localstorageclear()"></button>
+
+        <div class="interface" id="adminInterface">
+            <h2>Verifier Interface</h2>
+
+            <br><br>
+            <table id="fileListTable">
+                <thead>
+                    <tr>
+                        <th>File Description</th>
+                        <th>Uploader</th>
+                        <th>File Link</th>
+                        <th>TimeStamp</th>
+                        <th>Verify</th>
+                    </tr>
+                </thead>
+                <tbody id="fileList"></tbody>
+            </table>
+            
+            <div id="verificationModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeVerificationModal()">&times;</span>
+                    <h2>Verification Questions</h2>
+                    <form id="verificationForm">
+                        <label>
+                            Question 1: Is the file authentic?
+                            <input type="radio" name="answer1" value="Yes"> Yes
+                            <input type="radio" name="answer1" value="No"> No
+                        </label>
+                        <br><br><br>
+                        <label>
+                            Question 2: Does the file meet the requirements?
+                            <input type="radio" name="answer2" value="Yes"> Yes
+                            <input type="radio" name="answer2" value="No"> No
+                        </label>
+                        <br><br><br>
+                        <label>
+                            Question 3: Are you sure to verify the file?
+                            <input type="radio" name="answer3" value="Yes"> Yes
+                            <input type="radio" name="answer3" value="No"> No
+                        </label>
+                        <br><br><br>
+                        <button type="button" onclick="handleVerificationSubmission()">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="interface" id="userInterface">
+            <h2>User Interface</h2>
+            
+            <br>
+            
+<div id="upload">
+    <label for="uploadType">Select Upload Type:</label>
+    <select id="uploadType">
+        <option value="academic">Academic Records</option>
+        <option value="skillset">Skillset Certification</option>
+    </select>
+    <br><br>
+
+                
+    <input type="email" id="emailInput" placeholder="Enter your Gmail address" required="reqiured"><br><br>
+    <input type="text" id="fileDescInput" placeholder="File Description" required="reqiured"><br><br>
+                <input type="file" id="fileInput">
+
+                <button class="button" onclick="uploadFile1()">Upload File</button>
+                <br><br>
+                <table id="transactionlisttable">
+                    <thead>
+                        <tr>
+                            <th>File Description</th>
+                            <th>IPFS Hash</th>
+                            <th>Transaction Hash</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transactionlist" style="overflow: auto;">
+                    </tbody>
+                </table>
+                <!-- Add user interface elements here if needed -->
+            </div>
+            
+    </div>
+    <div class="interface" id="specialAdminInterface">
+        <h2>Admin Interface</h2>
+        <table id="specialAdminFileListTable">
+            <thead>
+                <tr>
+                    <th>Verifier</th>
+                    <th>User Address</th>
+                    <th>File Description</th>
+                    <th>Verification Status</th>
+                    <th>Notify</th>
+                </tr>
+            </thead>
+            <tbody id="specialAdminFileList"></tbody>
+        </table>
+</div>
+    <!-- Include Web3 library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.5/web3.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    </div>
+</body>
+</html>

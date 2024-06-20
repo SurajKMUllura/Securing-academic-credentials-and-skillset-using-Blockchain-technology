@@ -1,0 +1,291 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.user-type {
+    margin-bottom: 20px;
+}
+
+.interface {
+    display: none;
+}
+
+.file-list {
+    margin-top: 20px;
+}
+
+.file-list a {
+    display: block;
+    margin-bottom: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.file-list a:hover {
+    text-decoration: underline;
+}
+
+.file-list {
+    margin-top: 20px;
+}
+
+.file-list a {
+    display: block;
+    margin-bottom: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.file-list a:hover {
+    text-decoration: underline;
+}
+.button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: auto;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+.tabcontent {
+    display: none;
+}
+
+.tablink {
+    background-color: #f2f2f2;
+    float: left;
+    border: 1px solid #ccc;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+.tablink:hover {
+    background-color: #ddd;
+}
+
+.tabs {
+    overflow: hidden;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/* Optional: Add a background color and some padding to the tabs */
+.tablink {
+    background-color: #f2f2f2;
+    color: #000;
+}
+
+.tablink.active {
+    background-color: #007bff; /* Blue color */
+    color: #fff; /* White text color */
+}
+#emailInput, #fileDescInput {
+    width: 100%; /* Set the width of the input field */
+    padding: 10px; /* Add padding to the input field */
+    font-size: 16px; /* Set the font size */
+    border: 1px solid #ccc; /* Add a border around the input field */
+    border-radius: 5px; /* Add rounded corners to the input field */
+    box-sizing: border-box; /* Ensure that padding and border are included in the width */
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+    padding: 20px;
+    background-image: url('./intro.jpg');
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 2%;
+}
+
+.intro-container h2 {
+    margin: 10px 0;
+}
+
+.intro-container h4 {
+    margin: 5px 0;
+}
+
+.intro-container button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.intro-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Style for the label */
+label {
+    font-weight: bold; /* Make the text bold */
+  }
+  
+  /* Style for the select element */
+  select {
+    padding: 8px; /* Add padding around the text */
+    font-size: 16px; /* Set the font size */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add border radius for rounded corners */
+  }
+  
+  /* Optional: Style for the options within the select element */
+  option {
+    font-size: 14px; /* Set the font size */
+  }
+  
+/* Style the placeholder text */
+#emailInput::placeholder,  #fileDescInput::placeholder{
+    color: #999; /* Set the color of the placeholder text */
+}
+
+/* Style the input field when it is in focus */
+#emailInput:focus,  #fileDescInput:focus{
+    outline: none; /* Remove the default focus outline */
+    border-color: #007bff; /* Change the border color when the input is in focus */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+#transactionlisttable {
+    border-collapse: collapse;
+    width: 100%;
+}
+#transactionlisttable th, #transactionlisttable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    overflow-x: auto;
+    max-width: 200px;
+}
+#transactionlisttable th {
+    background-color: #f2f2f2;
+}
+
+#fileListTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+#fileListTable th, #fileListTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+#fileListTable th {
+    background-color: #f2f2f2;
+}
+.verify-button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.verify-button:hover {
+    background-color: #0056b3;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    width: 70%;
+    max-width: 700px;
+}
+
+/* Special Admin Interface Table */
+#specialAdminFileListTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#specialAdminFileListTable th,
+#specialAdminFileListTable td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+    overflow-x: auto;
+    max-width: 180px;
+}
+
+#specialAdminFileListTable th {
+    background-color: #f2f2f2;
+}
+
+#specialAdminFileListTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#specialAdminFileListTable tr:hover {
+    background-color: #f2f2f2;
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
