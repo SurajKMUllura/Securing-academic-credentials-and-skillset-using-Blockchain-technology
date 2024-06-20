@@ -16,7 +16,7 @@ Setup Instructions
 
     bash
 
-    git clone https://github.com/your/repository.git
+    git clone https://github.com/SurajKMUllura/Securing-academic-credentials-and-skillset-using-Blockchain-technology
     cd repository
 
     Install Dependencies
